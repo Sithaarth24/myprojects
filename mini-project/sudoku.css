@@ -1,0 +1,51 @@
+body{
+    margin: 0;
+    padding:0;
+    height: 100vh;
+    font-family:'Courier New', Courier, monospace;
+    background-color:azure;
+}
+ .contain1{
+    margin-left: 350px;
+    margin-top: 50px;
+    width: 50%;
+    height:90%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content:flex-start;
+} 
+.contain{
+    height: 31.1%;
+    width: 31.16%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid rgb(133, 255, 153);
+    margin: 0;
+}
+.box{
+    height: 32.5%;
+    width: 31.3%;
+    display:flex;
+    align-content: flex-end;
+    border: 1px solid rgb(189, 185, 243);
+    margin: 0;
+}
+.fixed{
+    align-self: center;
+    font-size: 30px;
+    font-weight: bolder;
+    margin-left: 20%;
+}
+.inp{
+    width: 110%;
+    height:80%;
+    align-self: center;
+    border: none;
+    color:blueviolet;
+    align-items: center;
+    font-weight: bold;
+    font-size: 30px;
+    
+}

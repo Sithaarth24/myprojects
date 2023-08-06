@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mini games</title>
+    <style>
+        body{
+            background-color: rgb(85, 79, 79);
+            color: white;
+        }
+        .parent{
+            display: grid;
+            grid-template-columns: auto auto auto;
+            width: 50vw;
+            gap: 5px;
+        }
+        img{
+            width: 150px;
+            height: 150px;
+            border: 1px solid black;
+        }
+        
+        .child:hover{
+            box-shadow: 0 0 20px rgb(116, 240, 240);
+            transition: 0.5s;
+        }
+        .child{
+            padding: 20px;
+        }
+        a{
+            color:white;
+            text-decoration: none;
+        }
+        button{
+            background-color: black;
+            margin-left: 35%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to mini games</h1><br><br><br>
+    <div class="parent">
+        <div class="child">
+            <img src="rps.webp" alt="">
+            <button><a class="links" target="_blank" href="rps.html" >play</a></button>
+            
+        </div>
+        <div class="child">
+            <img src="sudoku.png" alt="">
+            <button> <a class="links" target="_blank" href="sudoku.html">play</a></button>
+            
+        </div>
+        <div class="child">
+            <img src="typing.png" alt="">
+            <button><a class="links" target="_blank" href="another.html">play</a></button>
+        </div>
+    </div>
+        
+    
+</body>
+</html>

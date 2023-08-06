@@ -1,0 +1,30 @@
+body{
+    background-color:rgb(235, 243, 126);
+    color: rgb(10, 10, 10);
+}
+
+.container{
+    width: 60vw;
+    margin: auto;
+    padding: 20px;
+    background-color: rgb(36, 241, 228);
+}
+.incorrect{
+    color: red;
+    text-decoration:line-through;
+}
+.correct{
+    color: green;
+}
+.display_txt{
+    height: fit-content;
+    align-self: center;
+    width: 70%;
+    height: 20px;
+}
+
+.get_input{
+    resize: none;
+    width: 70%;
+    
+}

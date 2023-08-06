@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>typing</title>
+    <link rel="stylesheet" href="typing_speed.css">
+   
+</head>
+<body onload="random_txt()">
+    <div class="container">
+        <div id="display_txt" class="display_txt"></div><br>
+    <div>
+        <div id="now"></div>
+        <div id="speed"></div>
+    </div>
+    <textarea onkeydown="preventBackspace()" id="get_input" class="get_input"></textarea><br><br>
+    <button id="start" onclick="start()">Start</button> 
+    <button id="end" onclick="end()">End</button>
+    <div id="time">00:00</div>
+    <script src="typing_speed.js" defer></script>
+</div>
+    
+    
+</body>
+</html>
