@@ -9,16 +9,19 @@
 </head>
 <body onload="random_txt()">
     <div class="container">
+        <h1>Test your speed</h1>
+        <h3>Select timing:</h3>
+        <button onclick="min(1)" id="b1">1min test</button>
+        <button onclick="min(2)" id="b2">2min test</button>
+        <button onclick="min(5)" id="b3">5min test</button>
+        <span id="tell"></span>
+        <br><br>
         <div id="display_txt" class="display_txt"></div><br>
-    <div>
-        <div id="now"></div>
-        <div id="speed"></div>
-    </div>
-    <textarea onkeydown="preventBackspace()" id="get_input" class="get_input"></textarea><br><br>
-    <button id="start" onclick="start()">Start</button> 
-    <button id="end" onclick="end()">End</button>
-    <div id="time">00:00</div>
-    <script src="typing_speed.js" defer></script>
+        <textarea onkeydown="preventBackspace()" id="get_input" class="get_input"></textarea><br><br>
+        <div id="time"> 00 : 00 </div><br>
+        <span id="speed"></span><br>
+        <span id="accuracy"></span><br>
+        <script src="typing_speed.js" defer></script>
 </div>
     
     
