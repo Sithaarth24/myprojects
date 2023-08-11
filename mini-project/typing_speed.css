@@ -19,6 +19,7 @@ body{
 }
 
 .get_input{
+    font-family: Arial, Helvetica, sans-serif;
     width: 100%;
     resize: none;
     height: 29%;
