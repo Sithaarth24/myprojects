@@ -6,56 +6,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>mini games</title>
     <style>
+        h1{
+            color: rgb(254, 253, 253);
+        }
         body{
-            background-color: rgb(85, 79, 79);
-            color: white;
+            background-color: rgb(0, 0, 0);
+            font-family: Arial, Helvetica, sans-serif;
         }
         .parent{
-            display: grid;
-            grid-template-columns: auto auto auto;
+            display: flex;
+            flex-direction: row;
             width: 50vw;
             gap: 5px;
         }
         img{
             width: 150px;
             height: 150px;
+            border-radius: 10px;
             border: 1px solid black;
         }
         
         .child:hover{
-            box-shadow: 0 0 20px rgb(116, 240, 240);
-            transition: 0.5s;
+            transform: scale(1.2);
         }
         .child{
+            display: flex;
+            flex-direction: column;
             padding: 20px;
+            transition: 0.5s;
         }
         a{
             color:white;
             text-decoration: none;
         }
-        button{
-            background-color: black;
-            margin-left: 35%;
+        span{
+            margin: 10px;
+            width: 70%;
+            align-self: center;
         }
     </style>
 </head>
 <body>
     <h1>Welcome to mini games</h1><br><br><br>
     <div class="parent">
-        <div class="child">
-            <img src="rps.webp" alt="">
-            <button><a class="links" target="_blank" href="rps.html" >play</a></button>
-            
-        </div>
-        <div class="child">
+    <a href="rps.html" target="_blank">   
+        
+            <div class="child">
+            <img src="rps.png" alt="">
+            <span style="color: white; ">Rock Paper Scissors</span>
+            </div>
+    </a>        
+    <a href="sudoku.html" target="_blank">
+            <div class="child">
             <img src="sudoku.png" alt="">
-            <button> <a class="links" target="_blank" href="sudoku.html">play</a></button>
-            
+            <span style="color: white;">Sudoku</span>
+            </div>
+    </a>
+    <a href="typing_speed.html" target="_blank">        
+        
+            <div class="child">
+            <img src="type_img.jpg" alt="">
+            <span style="color: white;">Typing Test</span>
         </div>
-        <div class="child">
-            <img src="typing.png" alt="">
-            <button><a class="links" target="_blank" href="typing_speed.html">play</a></button>
-        </div>
+    </a>
     </div>
         
     
