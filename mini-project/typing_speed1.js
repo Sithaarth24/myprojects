@@ -35,7 +35,7 @@ function min(t)
 
 
 let i=0;
-inp_text.addEventListener('input',(event) =>{
+inp_text.addEventListener('keydown',(event) =>{
     const a = inp_text.value
     console.log(a)
     const key = event.key
