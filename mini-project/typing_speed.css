@@ -63,5 +63,7 @@ button:hover{
     font-size: 15px;
     font-family: Arial, Helvetica, sans-serif;
 }
-
-
+.timing{
+    display: flex;
+    align-items: center;
+}

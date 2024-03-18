@@ -8,6 +8,9 @@ const acc = document.getElementById('accuracy');
 let int = null;
 let c=0,w=0,tt=0;
 let [milliseconds,seconds,minutes] = [0,60,0];
+let textQueue = []
+let front = -1
+
 function get_text()
 {
     return fetch(random_txt_url)
@@ -30,9 +33,13 @@ function min(t)
     minutes = t-1
     inp_text.focus();
     start_time()
+    startAdding()
 }
 
-
+function startAdding()
+{
+    setInterval(addToQueue,5000)
+}
 
 let i=0;
 inp_text.addEventListener('input',() =>{
@@ -50,8 +57,6 @@ inp_text.addEventListener('input',() =>{
     }
     if(i+1==quote_spans.length)
     {
-
-        get_text()
         random_txt()
         i=0
     }
@@ -59,9 +64,19 @@ inp_text.addEventListener('input',() =>{
 })
 
 function start_time()
-    {
-        int = setInterval(displayTimer,100);
-    }
+{
+    int = setInterval(displayTimer,100);
+}
+
+async function addToQueue()
+{
+    let txt = await get_text();
+    textQueue.push(txt)
+    if(front==-1)
+        front = 0
+    console.log(textQueue,front)
+}
+
 
 function displayTimer(){
     milliseconds+=100;
@@ -101,7 +116,36 @@ function validation()
     acc.innerHTML = "Accuracy : " + a + "%"
 }
 
-function preventBackspace(e) {
+async function initialize()
+{
+    let txt = await get_text()
+    display.innerHTML = ''
+    txt=txt.split('')
+    txt.forEach(element => {
+        const char_span=document.createElement('span')
+        char_span.innerText = element;
+        display.appendChild(char_span)
+    });
+    inp_text.value = ''
+}
+    
+
+function random_txt()
+{
+    addToQueue()
+    let txt = textQueue[front++]
+    // console.log(txt)
+    display.innerHTML = ''
+    txt=txt.split('')
+    txt.forEach(element => {
+        const char_span=document.createElement('span')
+        char_span.innerText = element;
+        display.appendChild(char_span)
+    });
+    inp_text.value = ''
+}
+
+window.addEventListener('keydown',(e)=>{
     var evt = e || window.event;
     if (evt) {
         var keyCode = evt.charCode || evt.keyCode;
@@ -113,20 +157,4 @@ function preventBackspace(e) {
             }
         }
     }
-
-}
-
-    
-
-async function random_txt()
-{
-    let txt = await get_text();
-    display.innerHTML = ''
-    txt=txt.split('')
-    txt.forEach(element => {
-        const char_span=document.createElement('span')
-        char_span.innerText = element;
-        display.appendChild(char_span)
-    });
-    inp_text.value = ''
-}
+})
